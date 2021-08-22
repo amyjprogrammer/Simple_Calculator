@@ -6,16 +6,32 @@ namespace Simple_Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Adding two numbers together.");
             Console.Write("Please enter your first number: ");
             double firstNum = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter your operator: ");
+            string oper = Console.ReadLine();
 
             Console.Write("Please enter your second number: ");
             double secondNum = Convert.ToDouble(Console.ReadLine());
 
-            double answer = secondNum + firstNum;
-
-            Console.WriteLine("The answer is {0:0.00}", answer);
+            if (oper == "+")
+            {
+                Console.WriteLine(firstNum + secondNum);
+            } else if (oper == "-")
+            {
+                Console.WriteLine(firstNum - secondNum);
+            } else if (oper == "/")
+            {
+                Console.WriteLine(firstNum / secondNum);
+            } else if (oper == "*")
+            {
+                Console.WriteLine(firstNum * secondNum);
+            } else
+            {
+                Console.WriteLine("Please use *, +, - or / for the operator");
+            }
+            
         }
     }
 }
